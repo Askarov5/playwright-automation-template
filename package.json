@@ -1,0 +1,46 @@
+{
+  "name": "benefits",
+  "version": "1.0.0",
+  "description": "Automation Framework of BCBS-RI's member demographic services",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint:a": "eslint --fix . && prettier --write .",
+    "lint": "eslint --fix ./src && prettier --write ./src",
+    "debug": "npx playwright test --debug",
+    "test": "echo %NODE_ENV% && npx playwright test ./src",
+    "test:local": "cross-env NODE_ENV='local' npm run test",
+    "test:dev": "cross-env NODE_ENV='dev' npm run test",
+    "test:qa": "cross-env NODE_ENV='qa' npm run test",
+    "test:uat": "cross-env NODE_ENV='uat' npm run test",
+    "test:prod": "cross-env NODE_ENV='prod' npm run test",
+    "headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mssql": "^8.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "@azure/identity": "^3.3.2",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "@playwright/test": "1.38.0",
+    "dotenv": "16.3.1",
+    "msnodesqlv8": "4.1.0",
+    "mssql": "9.3.2"
+  }
+}

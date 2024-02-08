@@ -1,0 +1,17 @@
+# ignore packages
+node_modules
+
+# ignore results, logs and cache
+/test-results/
+/playwright-report/
+/playwright/.cache/
+.vs
+
+# ignore built files
+/dist
+
+# keep secrets local
+/environments/*
+
+# removed for pipeline 
+package-lock.json

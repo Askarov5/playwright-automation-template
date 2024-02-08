@@ -1,0 +1,47 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+name: Automation Tests
+
+trigger:
+  - master
+
+variables:
+  - group: qa-automation-group
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.0.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm ci
+    displayName: 'npm install'
+
+  - script: |
+      npx playwright install --with-deps
+    displayName: 'Install Playwright Browsers'
+
+  - script: |
+      npm run test:qa
+    displayName: 'Run API tests'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    inputs:
+      searchFolder: 'testresults'
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'junit-results.xml'
+      mergeTestResults: true
+      failTaskOnFailedTests: true
+      testRunTitle: 'End-To-End Tests'
+    condition: succeededOrFailed()
+
+  - publish: $(System.DefaultWorkingDirectory)/playwright-report
+    artifact: playwright-report
+    condition: always()

@@ -1,0 +1,11 @@
+#build
+/dist
+
+#modules
+/node_modules
+
+#default files
+package-lock.json
+package.json
+*.md
+*.yml
