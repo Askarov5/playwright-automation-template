@@ -1,7 +1,7 @@
 {
-  "name": "benefits",
+  "name": "template",
   "version": "1.0.0",
-  "description": "Automation Framework of BCBS-RI's member demographic services",
+  "description": "Automation Framework",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "report": "npx playwright show-report"
   },
   "keywords": [],
-  "author": "",
+  "author": "Orozbek Askarov",
   "license": "ISC",
   "devDependencies": {
     "@types/mssql": "^8.1.2",
