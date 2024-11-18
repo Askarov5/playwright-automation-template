@@ -44,7 +44,7 @@ All tests and test-related files are/should be located under the /src folder. Fo
 
 # Additional packages
 
-- [dotenv](https://github.com/motdotla/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+- [dotenv](https://github.com/motdotla/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology. If you're using NODE ^v20.6.0 (or newer) you don't this package, [Node.js v20.6.0: Introducing Built-in `.env` File Support](https://nodejs.org/en/learn/command-line/how-to-read-environment-variables-from-nodejs)
 - [cross-env](https://www.npmjs.com/package/cross-env) - makes it so you can have a single command without worrying about setting or using the environment variable properly for the platform. Just set it like you would if it's running on a POSIX system, and cross-env will take care of setting it properly.
 
 The following dev dependencies have been added to keep the code clean and same format across the team.
