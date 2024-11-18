@@ -2,6 +2,12 @@
 
 This is a playwright automation framework template for any website automated testing. The framework uses TypeScript.
 
+Detailed articles have been written and can be found here:
+- [Building a Robust Automation Framework in Playwright](https://medium.com/@oroz.askarov/building-a-robust-automation-framework-in-playwright-typescript-version-b13be4e4bf56)
+- [Building a Robust API Testing Framework in Playwright](https://medium.com/@oroz.askarov/mastering-rest-api-testing-with-playwright-typescript-version-0d5e9a698bc5)
+
+
+
 # Pre requisites
 
 - Node JS: ^18
