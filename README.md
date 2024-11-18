@@ -1,6 +1,7 @@
 # Introduction
 
 This is a playwright automation framework template for any website automated testing. The framework uses TypeScript. 
+
 Crafting an automation framework in JavaScript or Typescript is a nuanced endeavor that demands meticulous attention to detail. The integration of tools like ES-Lint and Prettier serves as a protective shield, ensuring code quality and consistency. Strategic folder structuring, coupled with adept use of environment variables, empowers us to execute tests with flexibility, minimizing manual interventions. Leveraging dynamic test data from data sources not only enhances testing but also renders our code environment-agnostic. Embracing coding best practices and understanding the rationale behind them elevates us, as engineers, to foster a culture of excellence in automation framework development.
 
 Detailed articles have been written and can be found here:
